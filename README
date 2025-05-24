@@ -1,0 +1,130 @@
+
+# Emotion Prediction from Twitter Posts (Binary Classification)
+
+This project uses multiple machine learning models to predict **user emotion (Positive or Negative)** from Twitter posts. The dataset contains tweets labeled with various emotions, which are grouped into binary classes for classification.
+
+---
+
+## 📂 Project Structure
+
+```
+Emotion Prediction/
+├── data/
+│   └── tweet_emotions.csv         # Dataset
+├── models/
+│   ├── decision_tree_entropy.py   # Decision Tree (Entropy)
+│   ├── decision_tree_gini.py      # Decision Tree (Gini)
+│   ├── knn_model.py               # K-Nearest Neighbors
+│   ├── svm_model.py               # Support Vector Machine
+│   ├── random_forest.py           # Random Forest
+│   └── neural_network.py          # Neural Network
+├── outputs/
+│   └── tree_entropy_matplotlib.png
+│   └── tree_entropy_graphviz.png
+├── util/
+│   └── preprocess.py              # Preprocessing & TF-IDF Vectorizer
+├── main.py                        # Main runner to train and evaluate all models
+└── README.md                      # Project documentation
+```
+
+---
+
+## 🧠 Models Implemented
+
+- ✅ K-Nearest Neighbors (KNN)
+- ✅ Support Vector Machine (SVM)
+- ✅ Decision Tree (Gini & Entropy)
+- ✅ Random Forest
+- ✅ Neural Network (MLP)
+
+Each model is implemented separately and evaluated using:
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1-Score**
+
+---
+
+## 🧹 Preprocessing
+
+- Lowercasing text
+- Removing usernames, punctuation, and special characters
+- TF-IDF vectorization
+- Converting multi-class emotions into binary:
+  - **Positive** → joy, love, enthusiasm → `1`
+  - **Negative** → anger, sadness, hate, etc. → `0`
+
+---
+
+## 📊 Visualizations
+
+- Decision Trees are visualized and saved as:
+  - `outputs/tree_entropy_matplotlib.png`
+  - `outputs/tree_entropy_graphviz.png`
+
+---
+
+## 🚀 How to Run
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+You may also need Graphviz installed on your system for tree visualization:
+- [https://graphviz.org/download/](https://graphviz.org/download/)
+
+### 2. Run the project
+
+```bash
+python main.py
+```
+
+---
+
+## 📈 Sample Output
+
+```
+--- K-Nearest Neighbors (KNN) ---
+Accuracy: 0.78
+Precision: 0.45
+Recall: 0.21
+F1_score: 0.28
+
+--- Decision Tree (Entropy) ---
+Accuracy: 0.77
+Precision: 0.47
+Recall: 0.49
+F1_score: 0.48
+
+...
+```
+
+---
+
+## 💡 Future Improvements
+
+- Use Word2Vec or BERT for better text embeddings
+- Add hyperparameter tuning via GridSearchCV
+- Expand emotion labels for multi-class classification
+- Deploy as a web app for live tweet analysis
+
+---
+
+## 📚 Dataset Source
+
+The dataset was manually cleaned and adapted from an **emotion-labeled Twitter dataset** to fit a binary classification task.
+
+---
+
+## 🧑‍💻 Author
+
+**Your Name**  
+This project is part of a machine learning presentation task.
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
