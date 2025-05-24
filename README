@@ -52,15 +52,15 @@ Each model is implemented in its own file and evaluated using common classificat
 To ensure high-quality input for the models, the following steps are applied:
 
 1. **Lowercase all text**
-2. **Remove usernames (@user)**
+2. **Remove usernames (`@user`)**
 3. **Remove special characters and numbers**
 4. **Remove extra spaces**
 5. **TF-IDF vectorization (top 5000 features)**
 
 ### Emotion Mapping:
 
-- **Positive**: joy, love, enthusiasm → Label 1
-- **Negative**: anger, hate, sadness, worry, boredom, empty → Label 0
+- **Positive**: `joy`, `love`, `enthusiasm` → `Label 1`
+- **Negative**: `anger`, `hate`, `sadness`, `worry`, `boredom`, `empty` → `Label 0`
 
 ---
 
