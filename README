@@ -7,23 +7,23 @@ This project implements multiple machine learning models to predict **user emoti
 ## 📁 Project Structure
 
 ```
-Emotion Prediction/
-├── data/
-│   └── tweet_emotions.csv             # Raw dataset
-├── models/
-│   ├── decision_tree_entropy.py       # Decision Tree (Entropy)
-│   ├── decision_tree_gini.py          # Decision Tree (Gini)
-│   ├── knn_model.py                   # K-Nearest Neighbors
-│   ├── svm_model.py                   # Support Vector Machine
-│   ├── random_forest.py               # Random Forest
-│   └── neural_network.py              # Neural Network
-├── outputs/
-│   ├── tree_entropy_matplotlib.png    # Decision tree plot (matplotlib)
-│   └── tree_entropy_graphviz.png      # Decision tree plot (Graphviz)
-├── util/
-│   └── preprocess.py                  # Preprocessing & TF-IDF feature extraction
-├── main.py                            # Main script to execute all models
-└── README.md                          # Documentation
+  Emotion Prediction/
+  ├── data/
+  │   └── tweet_emotions.csv             # Raw dataset
+  ├── models/
+  │   ├── decision_tree_entropy.py       # Decision Tree (Entropy)
+  │   ├── decision_tree_gini.py          # Decision Tree (Gini)
+  │   ├── knn_model.py                   # K-Nearest Neighbors
+  │   ├── svm_model.py                   # Support Vector Machine
+  │   ├── random_forest.py               # Random Forest
+  │   └── neural_network.py              # Neural Network
+  ├── outputs/
+  │   ├── tree_entropy_matplotlib.png    # Decision tree plot (matplotlib)
+  │   └── tree_entropy_graphviz.png      # Decision tree plot (Graphviz)
+  ├── util/
+  │   └── preprocess.py                  # Preprocessing & TF-IDF feature extraction
+  ├── main.py                            # Main script to execute all models
+  └── README.md                          # Documentation
 ```
 
 ---
