@@ -18,7 +18,7 @@ Emotion Prediction/
 │   ├── random_forest.py               # Random Forest
 │   └── neural_network.py              # Neural Network
 ├── outputs/
-│   └── tree_entropy_matplotlib.png    # Decision tree plot (matplotlib)
+│   ├── tree_entropy_matplotlib.png    # Decision tree plot (matplotlib)
 │   └── tree_entropy_graphviz.png      # Decision tree plot (Graphviz)
 ├── util/
 │   └── preprocess.py                  # Preprocessing & TF-IDF feature extraction
@@ -52,15 +52,15 @@ Each model is implemented in its own file and evaluated using common classificat
 To ensure high-quality input for the models, the following steps are applied:
 
 1. **Lowercase all text**
-2. **Remove usernames (`@user`)**
+2. **Remove usernames (@user)**
 3. **Remove special characters and numbers**
 4. **Remove extra spaces**
 5. **TF-IDF vectorization (top 5000 features)**
 
 ### Emotion Mapping:
 
-- **Positive**: `joy`, `love`, `enthusiasm` → `Label 1`
-- **Negative**: `anger`, `hate`, `sadness`, `worry`, `boredom`, `empty` → `Label 0`
+- **Positive**: joy, love, enthusiasm → Label 1
+- **Negative**: anger, hate, sadness, worry, boredom, empty → Label 0
 
 ---
 
@@ -86,7 +86,7 @@ The `decision_tree_entropy.py` script generates two types of decision tree visua
 pip install -r requirements.txt
 ```
 
-> Make sure `graphviz` is installed for tree visualizations:  
+> Make sure graphviz is installed for tree visualizations:  
 > [https://graphviz.org/download/](https://graphviz.org/download/)
 
 ### 2. Run the Main Script
@@ -117,7 +117,6 @@ Accuracy: 0.8016
 Precision: 0.5239
 Recall: 0.5711
 F1_score: 0.5465
-
 ...
 ```
 
