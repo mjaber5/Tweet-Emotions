@@ -141,7 +141,7 @@ The dataset is a modified version of an emotion-labeled Twitter dataset. It was 
 
 ## 👨‍💻 Author
 
-**Your Name**  
+**Mohammed Jaber**  
 This project is part of a Machine Learning university presentation.
 
 > Feel free to fork, contribute, or use it for educational purposes!
