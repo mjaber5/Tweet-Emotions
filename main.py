@@ -24,7 +24,7 @@ for model in models:
     recall = recall_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
 
-    print(f"--- {name} ---")
+    print(f"\n--- {name} ---")
     print(f"Accuracy: {acc:.4f}")
     print(f"Precision: {prec:.4f}")
     print(f"Recall: {recall:.4f}")
