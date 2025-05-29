@@ -1,6 +1,7 @@
 from util.preprocess import load_and_preprocess
 from models import decision_tree_gini, decision_tree_entropy, svm_model, random_forest, neural_network, knn_model
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
 
 # Load preprocessed data
 X_train, X_test, y_train, y_test = load_and_preprocess('data/tweet_emotions.csv')
@@ -29,3 +30,12 @@ for model in models:
     print(f"Precision: {prec:.4f}")
     print(f"Recall: {recall:.4f}")
     print(f"F1_score: {f1:.4f}\n")
+
+    # Plot confusion matrix for Decision Tree (Gini)
+    if name == "Decision Tree (Gini)":
+        cm = confusion_matrix(y_test, y_pred)
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["Negative", "Positive"])
+        disp.plot(cmap='Blues')
+        plt.title("Confusion Matrix - Decision Tree (Gini)")
+        plt.savefig('confusion_matrix_decision_tree_gini.png')
+        plt.show()
